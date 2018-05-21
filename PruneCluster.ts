@@ -63,6 +63,7 @@ namespace PruneCluster {
 			this.position = { lat: +lat, lng: +lng };
 			this.weight = weight;
 			this.category = category;
+            this.categories = [category];
 			this.filtered = filtered;
 
 			// The hashCode is used to identify the Cluster object

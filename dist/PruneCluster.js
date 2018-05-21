@@ -35,6 +35,7 @@ var PruneCluster;
             _this.position = { lat: +lat, lng: +lng };
             _this.weight = weight;
             _this.category = category;
+            _this.categories = [category];
             _this.filtered = filtered;
             _this.hashCode = hashCodeCounter++;
             return _this;
