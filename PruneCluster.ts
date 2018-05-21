@@ -43,6 +43,10 @@ namespace PruneCluster {
 		// can also be a string
 		public category: number;
 
+        // The categories of the Marker, ideally a number between 0 and 7
+        // can also be a string
+        public categories: number[] = [];
+
 		// The weight of a Marker can influence the cluster icon or the cluster position
 		public weight: number;
 
@@ -190,6 +194,13 @@ namespace PruneCluster {
 			// Update the statistics if needed
 			if (marker.category !== undefined) {
 				this.stats[marker.category] = (this.stats[marker.category] + 1) || 1;
+			}
+
+			if (Array.isArray(marker.categories)) {
+				var l = marker.categories.length;
+				while (l--) {
+					this.stats[marker.categories[l]] = (this.stats[marker.categories[l]] + 1) || 1;
+				}
 			}
 		}
 
