@@ -56,6 +56,7 @@ var PruneCluster;
         function Cluster(marker) {
             var _this = _super.call(this) || this;
             _this.stats = [0, 0, 0, 0, 0, 0, 0, 0];
+            this.selectedMarkers = 0;
             _this.data = {};
             if (!marker) {
                 _this.hashCode = 1;
@@ -109,6 +110,12 @@ var PruneCluster;
             if (marker.category !== undefined) {
                 this.stats[marker.category] = (this.stats[marker.category] + 1) || 1;
             }
+            if (Array.isArray(marker.categories)) {
+                var l = marker.categories.length;
+                while (l--) {
+                    this.stats[marker.categories[l]] = (this.stats[marker.categories[l]] + 1) || 1;
+                }
+            }
         };
         Cluster.prototype.Reset = function () {
             this.hashCode = 1;
@@ -116,6 +123,7 @@ var PruneCluster;
             this.population = 0;
             this.totalWeight = 0;
             this.stats = [0, 0, 0, 0, 0, 0, 0, 0];
+            this.selectedMarkers = 0;
             if (Cluster.ENABLE_MARKERS_LIST) {
                 this._clusterMarkers = [];
             }
