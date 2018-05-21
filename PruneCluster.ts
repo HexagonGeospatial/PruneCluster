@@ -191,6 +191,13 @@ namespace PruneCluster {
 			if (marker.category !== undefined) {
 				this.stats[marker.category] = (this.stats[marker.category] + 1) || 1;
 			}
+
+                        if (Array.isArray(marker.categories)) {
+                            var l = marker.categories.length;
+                            while (l--) {
+                                this.stats[marker.categories[l]] = (this.stats[marker.categories[l]] + 1) || 1;
+                            }
+                        }
 		}
 
 		public Reset() {
