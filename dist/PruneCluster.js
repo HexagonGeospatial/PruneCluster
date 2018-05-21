@@ -31,6 +31,7 @@ var PruneCluster;
             if (weight === void 0) { weight = 1; }
             if (filtered === void 0) { filtered = false; }
             var _this = _super.call(this) || this;
+            _this.categories = [];
             _this.data = data;
             _this.position = { lat: +lat, lng: +lng };
             _this.weight = weight;
@@ -108,6 +109,12 @@ var PruneCluster;
             this.totalWeight = newWeight;
             if (marker.category !== undefined) {
                 this.stats[marker.category] = (this.stats[marker.category] + 1) || 1;
+            }
+            if (Array.isArray(marker.categories)) {
+                var l = marker.categories.length;
+                while (l--) {
+                    this.stats[marker.categories[l]] = (this.stats[marker.categories[l]] + 1) || 1;
+                }
             }
         };
         Cluster.prototype.Reset = function () {
