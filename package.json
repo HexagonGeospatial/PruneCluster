@@ -3,6 +3,10 @@
   "version": "2.1.0",
   "homepage": "https://github.com/karenpommeroy/PruneCluster",
   "description": "Fast and realtime marker clustering for Leaflet (forked from https://github.com/SINTEF-9012/PruneCluster)",
+  "scripts": {
+    "build": "grunt build",
+    "postinstall": "tsd install"
+  },
   "keywords": [
     "map",
     "clustering",

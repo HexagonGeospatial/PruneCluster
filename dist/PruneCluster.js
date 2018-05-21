@@ -35,7 +35,6 @@ var PruneCluster;
             _this.position = { lat: +lat, lng: +lng };
             _this.weight = weight;
             _this.category = category;
-            _this.categories = [category];
             _this.filtered = filtered;
             _this.hashCode = hashCodeCounter++;
             return _this;
@@ -57,7 +56,6 @@ var PruneCluster;
         function Cluster(marker) {
             var _this = _super.call(this) || this;
             _this.stats = [0, 0, 0, 0, 0, 0, 0, 0];
-            this.selectedMarkers = 0;
             _this.data = {};
             if (!marker) {
                 _this.hashCode = 1;
@@ -124,7 +122,6 @@ var PruneCluster;
             this.population = 0;
             this.totalWeight = 0;
             this.stats = [0, 0, 0, 0, 0, 0, 0, 0];
-            this.selectedMarkers = 0;
             if (Cluster.ENABLE_MARKERS_LIST) {
                 this._clusterMarkers = [];
             }

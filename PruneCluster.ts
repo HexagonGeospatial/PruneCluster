@@ -43,6 +43,10 @@ namespace PruneCluster {
 		// can also be a string
 		public category: number;
 
+        // The categories of the Marker, ideally a number between 0 and 7
+        // can also be a string
+        public categories: number[];
+
 		// The weight of a Marker can influence the cluster icon or the cluster position
 		public weight: number;
 
