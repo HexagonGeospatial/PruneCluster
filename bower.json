@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SINTEF-9012/PruneCluster.git"
+    "url": "https://github.com/karenpommeroy/PruneCluster.git"
   },
   "main": ["./dist/LeafletStyleSheet.css", "./dist/PruneCluster.js"]
 }
