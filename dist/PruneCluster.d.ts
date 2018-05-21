@@ -21,6 +21,7 @@ declare namespace PruneCluster {
     }
     class Marker extends ClusterObject {
         category: number;
+        categories: number[];
         weight: number;
         filtered: boolean;
         constructor(lat: number, lng: number, data?: {}, category?: number, weight?: number, filtered?: boolean);
