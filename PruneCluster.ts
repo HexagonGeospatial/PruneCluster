@@ -144,6 +144,12 @@ namespace PruneCluster {
 			if (marker.category !== undefined) {
 				this.stats[marker.category] = 1;
 			}
+            if (marker.categories && marker.categories.length) {
+                let l = marker.categories.length;
+                while (l--) {
+                    this.stats[marker.categories[l]] = 1;
+                }
+            }
 
 			this.totalWeight = marker.weight;
 

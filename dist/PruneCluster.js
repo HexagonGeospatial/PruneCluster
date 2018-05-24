@@ -74,6 +74,12 @@ var PruneCluster;
             if (marker.category !== undefined) {
                 _this.stats[marker.category] = 1;
             }
+            if (marker.categories && marker.categories.length) {
+                var l = marker.categories.length;
+                while (l--) {
+                    _this.stats[marker.categories[l]] = 1;
+                }
+            }
             _this.totalWeight = marker.weight;
             _this.position = {
                 lat: marker.position.lat,
