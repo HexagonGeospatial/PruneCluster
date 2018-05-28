@@ -1,10 +1,9 @@
 This is the fork of [PruneCluster](https://github.com/SINTEF-9012/PruneCluster) including following changes:
 
 #### Multiple category per markers
-Added possibility to have markers with more than one category, default style for displaying such markers
+Added possibility to have markers with more than one category.
 
-Example:
-(https://github.com/karenpommeroy/PruneCluster/pcc_1.png)
+![](https://github.com/karenpommeroy/PruneCluster/pcc_1.png)
 
 
 ![PruneCluster](https://sintef-9012.github.io/PruneCluster/logo.png)
